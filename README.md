@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2.3.2
-      - uses: steiley/exec-javascript-diagnostic@master
+      - uses: steiley/exec-javascript-diagnostic@v0.0.1
         with:
           package_name: stylelint
           target_path: "app/assets/**/*.sass"
