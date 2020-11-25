@@ -11,6 +11,9 @@ inputs:
   target_path:
     description: 'Target Path to execute'
     required: true
+  execute_command:
+    description: 'Execute command name'
+    required: false
 runs:
   using: 'node12'
   main: 'bin/main.js'
