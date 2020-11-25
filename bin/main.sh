@@ -1,4 +1,7 @@
 #!/bin/bash
 npm install ${INPUT_PACKAGE_NAME}
 cat package.json | grep -o -E "(${INPUT_PACKAGE_NAME}\-+(\w|\-)+)" | xargs npm install
-npx ${INPUT_PACKAGE_NAME} ${INPUT_TARGET_PATH}
+if [ -z "${INPUT_EXECUTE_COMMAND}" ]; then
+  INPUT_EXECUTE_COMMAND=${INPUT_PACKAGE_NAME}
+fi
+npx ${INPUT_EXECUTE_COMMAND} ${INPUT_TARGET_PATH}
