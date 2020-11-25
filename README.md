@@ -23,10 +23,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2.3.2
-      - uses: steiley/exec-javascript-diagnostic@v0.0.1
+      - uses: steiley/exec-javascript-diagnostic@v0.0.2
         with:
           package_name: stylelint
           target_path: "app/assets/**/*.sass"
+          # optinal(use this when the package name is different from the executable command name)
+          execute_command: stylelint
 ```
 
 # License
